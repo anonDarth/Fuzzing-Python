@@ -15,7 +15,7 @@ while True:
         s.send((payload.encode()))
         s.close()
         sleep(1)
-        buffer = buffer + "F"*100
+        buffer = buffer + "A"*100
     except:
         print ("The Fuzzing Start %s bytes" % str(len(buffer)))
         sys.exit()
